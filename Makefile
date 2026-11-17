@@ -4,7 +4,7 @@ TARGET = bomber-sub
 
 all: $(TARGET)
 
-$(TARGET):
+$(TARGET): 
 	$(CC) $(CFLAGS) $< -o $(TARGET)
 
 .PHONY: all clean
