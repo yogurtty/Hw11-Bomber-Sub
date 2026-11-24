@@ -21,4 +21,6 @@ typedef struct {
   int num_bombs;
 } Bot_t;
 
-
+void check_state(bot_t *bot, Position player_pos) {
+  if (in_danger
+}
