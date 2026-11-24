@@ -28,6 +28,7 @@ int main(int argc, char *argv[]) {
       SDL_Quit();
       return 1;
   }
+  printf("created window\n\n");
 
   // create renderer
   SDL_Renderer *renderer = SDL_CreateRenderer(
@@ -42,8 +43,9 @@ int main(int argc, char *argv[]) {
 
   // main event loop to keep the window open and responsive
   int running = 1;
-  int player_row = 2;
+  /*int player_row = 2;
   int player_col = 2;
+  */
 
   while (running) {
   SDL_Event event;
@@ -55,8 +57,10 @@ int main(int argc, char *argv[]) {
       else if (event.type == SDL_KEYDOWN) {
         switch (event.key.keysym.scancode) {
           case SDLK_ESCAPE:
+            printf("esc pressed\n");
             running = 0;
             break;
+          /*
           case SDLK_UP:
           case SDLK_w: {
             if (player_row > 0) player_row--;
@@ -77,6 +81,7 @@ int main(int argc, char *argv[]) {
             if (player_col < (COLS - 1)) player_col++;
             break;
           }
+          */
           default: {
             break;
           }
@@ -86,7 +91,6 @@ int main(int argc, char *argv[]) {
 
     SDL_SetRenderDrawColor(renderer, 100, 230, 60, 60);
     SDL_RenderClear(renderer);
-
     SDL_RenderPresent(renderer);
   }
 
