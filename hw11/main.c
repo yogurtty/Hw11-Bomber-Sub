@@ -1,6 +1,6 @@
-#include "player.h"
-#include "map.h"
-#include "ai.h"
+#include "../headers/player.h"
+#include "../headers/map.h"
+//#include ".,/headers/ai.h"
 #include <stdio.h>
 #include <SDL2/SDL.h>
 
@@ -10,6 +10,8 @@
 
 int main(int argc, char *argv[]) {
   // initialize the SDL video subsystem
+  fflush(stderr);
+  fflush(stdout);
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     fprintf(stderr, "SDL_Error: %s\n", SDL_GetError());
     return 1;
